@@ -1,0 +1,48 @@
+Table hirdetes {
+  id int [primary key]
+  hirdetes_cim string [not null] 
+  kep_url string [not null] 
+  ar int [not null]
+  leiras text
+}
+
+Table hirdeto {
+  id int [primary key]
+  nev string [not null]
+  tel_szam string [not null]
+  email string [not null]
+}
+
+Table hirdeto_hirdetes_kapcsolat {
+  hirdeto_id int
+  hirdetes_id int
+}
+
+Table altalanos_adat {
+  id int [primary key]
+  hirdetes_id int
+  marka string [not null]
+  modell string [not null]
+  kivitel string [not null]
+  evjarat int [not null]
+}
+
+Table jarmu_adat{
+  id int [primary key]
+  hirdetes_id int
+  km_ora_allas int [not null]
+  szallithato_szemely_szama int [not null] 
+  ajtok_szama int [not null]
+  uzemanyag string [not null]
+  hengerurtartalom int [not null] 
+  teljesitmeny int [not null] 
+}
+
+
+Ref: hirdetes.id < jarmu_adat.hirdetes_id 
+
+Ref: hirdetes.id < altalanos_adat.hirdetes_id
+
+Ref: hirdetes.id < hirdeto_hirdetes_kapcsolat.hirdetes_id
+
+Ref: hirdeto.id < hirdeto_hirdetes_kapcsolat.hirdeto_id

@@ -1,0 +1,43 @@
+{
+  "name": "TK Autókereskedés",
+  "version": "0.0.1",
+  "description": "TK Autókereskedés, Használt autó hirdetések",
+  "productName": "TK Autókereskedés",
+  "author": "Tulézi Kristóf",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ext .js,.ts,.vue ./",
+    "format": "prettier --write \"**/*.{js,ts,vue,scss,html,md,json}\" --ignore-path .gitignore",
+    "test": "echo \"No test specified\" && exit 0",
+    "dev": "quasar dev",
+    "build": "quasar build"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.16.17",
+    "axios": "^1.7.9",
+    "pinia": "^3.0.1",
+    "quasar": "^2.17.7",
+    "vue": "^3.5.13",
+    "vue-i18n": "^11.1.1",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@intlify/unplugin-vue-i18n": "^6.0.3",
+    "@quasar/app-vite": "^2.1.1",
+    "@types/node": "^22.13.4",
+    "@typescript-eslint/eslint-plugin": "^8.24.1",
+    "@typescript-eslint/parser": "^8.24.1",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.20.1",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-vue": "^9.32.0",
+    "json-server": "^0.17.4",
+    "prettier": "^3.5.1",
+    "typescript": "~5.7.3"
+  },
+  "engines": {
+    "node": "^20 || ^18 || ^16 || ^14.19",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}
